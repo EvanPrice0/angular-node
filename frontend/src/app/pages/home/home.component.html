@@ -1,0 +1,35 @@
+<div>
+    <mat-toolbar [class.example-is-mobile]="mobileQuery.matches" style="height: 15vh;" color="blue">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <button (click)=goBack()>
+            <img src='../../../assets/img/prvn.png' height="80px" width="auto" />
+        </button>
+        <span>The Proven Solution</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-toolbar>
+    <mat-sidenav-container class="example-container" style="height: 80vh;">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list>
+                <a routerLink=".." routerLinkActive="active" mat-list-item>home</a>
+                <a routerLink="services" routerLinkActive="active" mat-list-item>services</a>
+                <a routerLink="careers" routerLinkActive="active" mat-list-item>careers</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet *ngIf="router.url != '/home'"></router-outlet>
+            <p *ngIf="router.url === '/home'">
+asdfas
+            </p>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
