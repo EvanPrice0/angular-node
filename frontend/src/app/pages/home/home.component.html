@@ -33,44 +33,7 @@
                 <div style="display: flex;">
                     <div style="flex: 1;"></div>
                     <div style="flex: 4; display: flex; flex-direction: column;">
-                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators" style="bottom: 7%;">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner" style="height: 45vh;">
-                                <div class="carousel-item active" style="height: 40vh;">
-                                    <img src="assets/img/arc3d.jpg" height="100%" class="d-block w-100" alt="Arc 3d">
-                                    <div class="carousel-caption d-sm-block"
-                                        style="top: 65%; color: white; background-color: rgb(0,0,0,.6);">
-                                        <h5>Arc 3d</h5>
-                                        <p>Here is our Arc 3d.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" *ngFor="let slide of slides" style="height: 40vh;">
-                                    <img src={{slide.path}} height="100%" class="d-block w-100" alt={{slide.alt}}>
-                                    <div class="carousel-caption d-sm-block"
-                                        style="top: 65%; color: white; background-color: rgb(0,0,0,.6);">
-                                        <h5>{{slide.header}}</h5>
-                                        <p>{{slide.description}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+                        <carousel [slides]="slides" [slide1]=""></carousel>
                         <div style="display: flex; padding: 5px;">
                             <aside style="flex: 1;">
                                 <b>PRVN CONSULTANTS, INC.</b> is a niche company that works
