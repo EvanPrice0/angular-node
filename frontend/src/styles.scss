@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-
+@import "~bootstrap/dist/css/bootstrap.css";
 button {
     display: inline-block;
     border: none;
@@ -16,7 +16,17 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-.mat-toolbar.mat-primary {
-    background: #007bff;
-    color: #fff;
+
+body {
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .sizer{
+      font-size: 75%;
+    }
+  }
+  @media (min-width: 601px) {
+    .sizer{
+      font-size: 100%;
+    }
   }

@@ -1,35 +1,117 @@
 <div>
-    <mat-toolbar [class.example-is-mobile]="mobileQuery.matches" style="height: 15vh;" color="blue">
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    <mat-toolbar [class.example-is-mobile]="mobileQuery.matches" style="height: 15vh;">
+        <button mat-icon-button class="d-sm-block d-md-none example-icon" aria-label="Example icon-button with menu icon"
             (click)="snav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
-        <button (click)=goBack()>
-            <img src='../../../assets/img/prvn.png' height="80px" width="auto" />
+        <button (click)=goBack() class="home-button">
+            <img src='../../../assets/img/prvn.png' height="auto" width="80px" />
+            <span>The Proven Solution</span>
         </button>
-        <span>The Proven Solution</span>
         <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>favorite</mat-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon>share</mat-icon>
-        </button>
+        <a routerLink="services" style="background-color: black; border: none;" class="btn btn-primary d-none d-md-block" routerLinkActive="active" mat-list-item>services</a>
+        <a routerLink="careers" style="background-color: black; border: none;"  class="btn btn-primary d-none d-md-block" routerLinkActive="active" mat-list-item>careers</a>
+        <a routerLink="contact" style="background-color: black; border: none;"  class="btn btn-primary d-none d-md-block" routerLinkActive="active" mat-list-item>contact</a>
+        <a routerLink="photos" style="background-color: black; border: none;"  class="btn btn-primary d-none d-md-block" routerLinkActive="active" mat-list-item>photos</a>
+        <a routerLink="team" style="background-color: black; border: none;"  class="btn btn-primary d-none d-md-block" routerLinkActive="active" mat-list-item>team</a>
     </mat-toolbar>
-    <mat-sidenav-container class="example-container" style="height: 80vh;">
+    <mat-sidenav-container class="example-container" style="height: 70vh;">
         <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
             fixedTopGap="56">
             <mat-nav-list>
                 <a routerLink=".." routerLinkActive="active" mat-list-item>home</a>
                 <a routerLink="services" routerLinkActive="active" mat-list-item>services</a>
                 <a routerLink="careers" routerLinkActive="active" mat-list-item>careers</a>
+                <a routerLink="contact" routerLinkActive="active" mat-list-item>contact</a>
+                <a routerLink="photos" routerLinkActive="active" mat-list-item>photos</a>
+                <a routerLink="team" routerLinkActive="active" mat-list-item>team</a>
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
             <router-outlet *ngIf="router.url != '/home'"></router-outlet>
-            <p *ngIf="router.url === '/home'">
-asdfas
-            </p>
+            <div *ngIf="router.url === '/home'" style="display: flex; flex-direction: column;">
+                <div style="display: flex;">
+                    <div style="flex: 1;"></div>
+                    <div style="flex: 4; display: flex; flex-direction: column;">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators" style="bottom: 7%;">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner" style="height: 45vh;">
+                                <div class="carousel-item active" style="height: 40vh;">
+                                    <img src="assets/img/arc3d.jpg" height="100%" class="d-block w-100" alt="Arc 3d">
+                                    <div class="carousel-caption d-sm-block"
+                                        style="top: 65%; color: white; background-color: rgb(0,0,0,.6);">
+                                        <h5>Arc 3d</h5>
+                                        <p>Here is our Arc 3d.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" *ngFor="let slide of slides" style="height: 40vh;">
+                                    <img src={{slide.path}} height="100%" class="d-block w-100" alt={{slide.alt}}>
+                                    <div class="carousel-caption d-sm-block"
+                                        style="top: 65%; color: white; background-color: rgb(0,0,0,.6);">
+                                        <h5>{{slide.header}}</h5>
+                                        <p>{{slide.description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div style="display: flex; padding: 5px;">
+                            <aside style="flex: 1;">
+                                <b>PRVN CONSULTANTS, INC.</b> is a niche company that works
+                                in the district energy (heating, cooling, and electrical
+                                generation) and combined heat and power (CHP) arena. We
+                                bring our clients the experience of a large firm, with the
+                                personal service of a small firm, while remaining nimble
+                                and flexible in our approach. Since we were established
+                                in 2011, we have continued to expand our services and
+                                expertise. Our unique pool of talent uses upfront collaboration,
+                                advanced problem solving, and fresh thinking to find practical
+                                and efficient solutions to complex challenges.Our Principals
+                                are very experienced. We work hand-in-hand with your team to
+                                find the best approach to each project, utilizing unique, innovative,
+                                and cost-effective solutions.
+                            </aside>
+                            <main style="flex: 3; padding: 5px;">
+                                <b>FOR IMMEDIATE RELEASE:</b> Given the current situation regarding the COVID-19 virus,
+                                PRVN Consultants, Inc. announced that for the safety of its professionals, clients, and
+                                partners, it will be limiting travel to essential business travel. Professionals
+                                exhibiting any symptoms such as fever, cough, or shortness of breath, or caring for
+                                those who are, are asked to stay home and work remotely. We will utilize technology to
+                                reduce face-to-face interactions while remaining productive to deliver timely, quality
+                                solutions for our clients.
+                            </main>
+                        </div>
+                    </div>
+                    <div style="flex: 1;"></div>
+                </div>
+            </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
+    <footer class="page-footer font-small" style="height: 15vh; background-color: black;">
+
+        <!-- Copyright -->
+        <div style="color:white" class="sizer footer-copyright text-center py-3">© 2014 Copyright:
+            <a href="https://prvninc.com/"> PRVN Inc. </a>
+            <div>PRVN Consultants, Inc. * 710 Pacha Parkway, Suite 1, North Liberty, IA 52317</div>
+            <div>email: <a href="mailto:proven@prvninc.com">PROVEN@PRVNinc.com</a> Phone:<a
+                    href="tel:3193597808">(319)359-7808</a></div>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </div>

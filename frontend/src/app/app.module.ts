@@ -11,14 +11,22 @@ import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import { ServicesComponent } from './pages/services/services.component';
-import { CareersComponent } from './pages/careers/careers.component'; 
+import { CareersComponent } from './pages/careers/careers.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { TeamComponent } from './pages/team/team.component';
+import { PhotosComponent } from './pages/photos/photos.component';
+import { CarouselComponent } from './reuse/carousel/carousel.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ServicesComponent,
-    CareersComponent
+    CareersComponent,
+    ContactComponent,
+    TeamComponent,
+    PhotosComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
