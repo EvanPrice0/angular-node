@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { Slide } from '../../models/slide';
 @Component({
   selector: 'carousel',
   templateUrl: './carousel.component.html',
@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CarouselComponent{
 
-  @Input() slide1: object;
-  @Input() slides: object[];
+  @Input() slide1: Slide;
+  @Input() slides: Slide[];
 
 }

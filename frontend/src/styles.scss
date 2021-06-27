@@ -19,10 +19,14 @@ button {
 
 body {
     margin: 0;
+    font-style: georgia;
 }
 @media (max-width: 600px) {
     .sizer{
       font-size: 75%;
+    }
+    .example-spacer {
+      flex: 1 1 auto;
     }
   }
   @media (min-width: 601px) {

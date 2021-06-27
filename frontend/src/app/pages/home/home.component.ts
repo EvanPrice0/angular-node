@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { CarouselComponent } from 'src/app/reuse/carousel/carousel.component';
+import { Slide } from 'src/app/models/slide';
 
 @Component({
   selector: 'home-nav-to',
@@ -18,7 +19,13 @@ export class HomeComponent extends CarouselComponent{
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
-  slides = [
+  slide1:Slide = {
+    path: '../../assets/img/arc3d.jpg',
+    header: "Arc 3d",
+    description: "here is Arc 3d",
+    alt: 'Arc 3d'
+  }
+  slides:Slide[] = [
     {
       path: '../../assets/img/pipes.jpg',
       header: "Pipes",

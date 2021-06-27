@@ -28,12 +28,13 @@
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-            <router-outlet *ngIf="router.url != '/home'"></router-outlet>
-            <div *ngIf="router.url === '/home'" style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: column;">
                 <div style="display: flex;">
                     <div style="flex: 1;"></div>
-                    <div style="flex: 4; display: flex; flex-direction: column;">
-                        <carousel [slides]="slides" [slide1]=""></carousel>
+                    <router-outlet *ngIf="router.url != '/home'"></router-outlet>
+
+                    <div *ngIf="router.url === '/home'" style="flex: 4; display: flex; flex-direction: column;">
+                        <carousel [slides]="slides" [slide1]="slide1"></carousel>
                         <div style="display: flex; padding: 5px;">
                             <aside style="flex: 1;">
                                 <b>PRVN CONSULTANTS, INC.</b> is a niche company that works
