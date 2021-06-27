@@ -1,6 +1,4 @@
-  .mat-toolbar{
-    background-color: (255, 255, 255, .5);
-  }
+
 
 .home-button {
   display: flex;
@@ -21,7 +19,7 @@ mat-icon{
   border: none;
 }
 .rl:hover{
-  border-radius: 15%;
+  border-radius: 3%;
   background-color: rgba(204, 199, 185, 0.692);
 }
 .rl.active{
@@ -38,7 +36,8 @@ mat-icon{
   text-decoration: none;
 }
 button:hover{
-  background-color: rgb(255, 255, 255, .5);
+  border-radius: 3%;
+  background-color: rgba(204, 199, 185, 0.692);
 }
 
 .color-gap{
