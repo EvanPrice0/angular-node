@@ -5,6 +5,7 @@ button {
     display: inline-block;
     border: none;
     margin: 0;
+    width: 20%;
     text-decoration: none;
     background: none;
     color: none;
@@ -16,17 +17,25 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+.example-spacer {
+  flex: 1 1 auto;
+}
 
 body {
     margin: 0;
     font-style: georgia;
 }
+@media (max-width: 1000px) {
+  a{
+    font-size: 60%;
+  }
+  .example-spacer1 {
+    flex: 1 1 auto;
+  }
+}
 @media (max-width: 600px) {
     .sizer{
       font-size: 75%;
-    }
-    .example-spacer {
-      flex: 1 1 auto;
     }
   }
   @media (min-width: 601px) {

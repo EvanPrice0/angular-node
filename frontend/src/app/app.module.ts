@@ -15,7 +15,12 @@ import { CareersComponent } from './pages/careers/careers.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { TeamComponent } from './pages/team/team.component';
 import { PhotosComponent } from './pages/photos/photos.component';
-import { CarouselComponent } from './reuse/carousel/carousel.component'; 
+import { CarouselComponent } from './reuse/carousel/carousel.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { CardComponent } from './reuse/card/card.component'; 
+import {MatCardModule} from '@angular/material/card';
+import { PictureCardComponent } from './reuse/picture-card/picture-card.component';
+import { TwitterComponent } from './svg/twitter/twitter.component'; 
 
 @NgModule({
   declarations: [
@@ -26,7 +31,11 @@ import { CarouselComponent } from './reuse/carousel/carousel.component';
     ContactComponent,
     TeamComponent,
     PhotosComponent,
-    CarouselComponent
+    CarouselComponent,
+    WelcomeComponent,
+    CardComponent,
+    PictureCardComponent,
+    TwitterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +47,7 @@ import { CarouselComponent } from './reuse/carousel/carousel.component';
     BrowserAnimationsModule,
     MatButtonToggleModule,
     MatListModule,
+    MatCardModule,
   ],
   providers: [],
   entryComponents: [HomeComponent],

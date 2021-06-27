@@ -1,1 +1,18 @@
-<p>services works!</p>
+<carousel [slides]="slides" [slide1]="slide1"></carousel>
+<div style="display: flex; padding: 5px;">
+    <aside style="flex: 1;">
+        <ul>
+            <li *ngFor="let list of serviceAsideList">
+                {{list}}
+            </li>
+        </ul>
+    </aside>
+    <main style="flex: 3; padding: 5px;">
+        <ul>
+            <li *ngFor="let list of serviceList">
+                {{list}}
+            </li>
+        </ul>
+
+    </main>
+</div>

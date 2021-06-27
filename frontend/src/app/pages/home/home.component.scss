@@ -7,7 +7,6 @@
   display: flex;
 box-sizing: border-box;
 padding: 0 16px;
-width: 100%;
 flex-direction: row;
 align-items: center;
 white-space: nowrap;
@@ -15,3 +14,33 @@ white-space: nowrap;
 mat-icon{
   color: rgb(0,0,0);
 }
+.rl{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px; 
+  border: none;
+}
+.rl:hover{
+  border-radius: 35%;
+  background-color: rgb(255, 255, 255, .5);
+}
+.rl.active{
+  border-radius: 35%;
+  background-color: rgb(255, 255, 255, .5);
+}
+.rl:link{
+  color:black;
+}
+.btn {
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* Set a specific color for each brand */
+
+/* Facebook */
