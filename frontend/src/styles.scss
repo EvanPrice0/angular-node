@@ -63,3 +63,11 @@ body {
     height: 77vh; 
   }
 }
+@media (max-height: 715px) {
+  .toolbar{
+    min-height: 70px; 
+  }
+}
+.toolbar{
+  height:10vh;
+}

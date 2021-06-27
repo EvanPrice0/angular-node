@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -21,8 +23,12 @@ import { CardComponent } from './reuse/card/card.component';
 import {MatCardModule} from '@angular/material/card';
 import { PictureCardComponent } from './reuse/picture-card/picture-card.component';
 import { TwitterComponent } from './svg/twitter/twitter.component';
-import { ProfileCardComponent } from './reuse/profile-card/profile-card.component'; 
-
+import { ProfileCardComponent } from './reuse/profile-card/profile-card.component';
+import { AdminComponent } from './pages/admin/admin.component'; 
+import { HttpClientModule } from '@angular/common/http';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatInputModule} from '@angular/material/input'; 
+import {MatRippleModule} from '@angular/material/core'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +43,8 @@ import { ProfileCardComponent } from './reuse/profile-card/profile-card.componen
     CardComponent,
     PictureCardComponent,
     TwitterComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +57,12 @@ import { ProfileCardComponent } from './reuse/profile-card/profile-card.componen
     MatButtonToggleModule,
     MatListModule,
     MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    HttpClientModule,
+    MatRippleModule,
+    MatFormFieldModule,
   ],
   providers: [],
   entryComponents: [HomeComponent],
