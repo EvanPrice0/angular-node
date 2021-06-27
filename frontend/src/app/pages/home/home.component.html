@@ -1,34 +1,37 @@
 <div>
-    <mat-toolbar [class.example-is-mobile]="mobileQuery.matches" style="height: 15vh;">
-        <button mat-icon-button class="d-sm-block d-md-none example-icon" aria-label="Example icon-button with menu icon"
-            (click)="snav.toggle()">
+    <mat-toolbar [class.example-is-mobile]="mobileQuery.matches" style="height: 10vh;">
+        <button mat-icon-button class="d-sm-block d-md-none example-icon"
+            aria-label="Example icon-button with menu icon" (click)="snav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
         <button (click)=goBack() class="home-button">
-            <img src='../../../assets/img/prvn.png' height="auto" width="80px" />
+            <img src='../../../assets/img/prvn.png' height="auto" width="35%" style="min-width: 50px; max-width: 80px;" />
             <span>The Proven Solution</span>
         </button>
         <span class="example-spacer1"></span>
         <a routerLink="services" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>services</a>
-        <a routerLink="careers"  class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>careers</a>
-        <a routerLink="contact"  class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>contact</a>
-        <a routerLink="photos"  class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>photos</a>
-        <a routerLink="team"  class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>team</a>
+        <a routerLink="careers" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>careers</a>
+        <a routerLink="contact" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>contact</a>
+        <a routerLink="photos" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>photos</a>
+        <a routerLink="team" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>team</a>
         <span class="example-spacer"></span>
-        <div>
-            <twitter></twitter>
-        </div>
+        <twitter></twitter>
+
     </mat-toolbar>
-    <mat-sidenav-container class="example-container" style="height: 70vh;">
+    <mat-sidenav-container class="example-container cont-adj">
         <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
-            fixedTopGap="56">
+            fixedTopGap="56" class="d-sm-block d-md-none">
             <mat-nav-list>
-                <a class="rl" routerLink=".." routerLinkActive="active" mat-list-item>home</a>
-                <a class="rl" routerLink="services" routerLinkActive="active" mat-list-item>services</a>
-                <a class="rl" routerLink="careers" routerLinkActive="active" mat-list-item>careers</a>
-                <a class="rl" routerLink="contact" routerLinkActive="active" mat-list-item>contact</a>
-                <a class="rl" routerLink="photos" routerLinkActive="active" mat-list-item>photos</a>
-                <a class="rl" routerLink="team" routerLinkActive="active" mat-list-item>team</a>
+                <a class="rl" (click)="snav.toggle()" routerLink=".." routerLinkActive="active" mat-list-item>home</a>
+                <a class="rl" (click)="snav.toggle()" routerLink="services" routerLinkActive="active"
+                    mat-list-item>services</a>
+                <a class="rl" (click)="snav.toggle()" routerLink="careers" routerLinkActive="active"
+                    mat-list-item>careers</a>
+                <a class="rl" (click)="snav.toggle()" routerLink="contact" routerLinkActive="active"
+                    mat-list-item>contact</a>
+                <a class="rl" (click)="snav.toggle()" routerLink="photos" routerLinkActive="active"
+                    mat-list-item>photos</a>
+                <a class="rl" (click)="snav.toggle()" routerLink="team" routerLinkActive="active" mat-list-item>team</a>
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
@@ -37,20 +40,22 @@
                     <div style="flex: 1;"></div>
                     <div style="flex: 4; display: flex; flex-direction: column;">
                         <router-outlet *ngIf="router.url != '/home'"></router-outlet>
-                        <welcome *ngIf="router.url === '/home'" ></welcome>
+                        <welcome *ngIf="router.url === '/home'"></welcome>
                     </div>
                     <div style="flex: 1;"></div>
                 </div>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
-    <footer class="page-footer font-small" style="height: 15vh; background-color: black;">
+    <footer class="page-footer font-small height-adj" style="background-color: black;">
         <!-- Copyright -->
         <div style="color:white" class="sizer footer-copyright text-center py-3">© 2014 Copyright:
             <a href="https://prvninc.com/"> PRVN Inc. </a>
-            <div>PRVN Consultants, Inc. * 710 Pacha Parkway, Suite 1, North Liberty, IA 52317</div>
-            <div>email: <a href="mailto:proven@prvninc.com">PROVEN@PRVNinc.com</a> Phone:<a
-                    href="tel:3193597808">(319)359-7808</a></div>
+            PRVN Consultants, Inc. * 710 Pacha Parkway, Suite 1, North Liberty, IA 52317
+            email: <a href="mailto:proven@prvninc.com">PROVEN@PRVNinc.com</a>
+                North Liberty:<a href="tel:3193597808">(319)359-7808</a>
+                Rock Island:<a href="tel:5632635160">(563)263-5160</a>
+            
         </div>
         <!-- Copyright -->
     </footer>

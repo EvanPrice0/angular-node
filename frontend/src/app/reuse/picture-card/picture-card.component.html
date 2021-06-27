@@ -1,22 +1,14 @@
-<!-- <mat-card>
-    <h2>{{position.type}}</h2>
-    <p>
-        {{position.header}}
-    </p>
-    <h5>POSITION DESCRIPTION:</h5>
-    <ul>
-        <li *ngFor="let item of position.descriptions">
-            {{item}}
-        </li>
-    </ul>
-    <h5>SKILLS:</h5>
-    <ul>
-        <li *ngFor="let item of position.skills">
-            {{item}}
-        </li>
-    </ul>
-    <h5>BENEFITS:</h5>
-    <p>
-        {{position.benefit}}
-    </p>
-</mat-card> -->
+<mat-card>
+    <div style="display: flex; flex-direction: column; text-align: center;">
+        <div class="list-style">
+            <div *ngFor="let image of img.path" style="flex: 1">
+                <img src={{image}} width="100%" height="235vh"
+                    style="padding: 3px; max-width: 305px;" />
+            </div>
+        </div>
+        <h2 style="text-align: center;">{{img.header}}</h2>
+        <div style="text-align: center;" *ngFor="let body of img.body">
+            {{body}}
+        </div>
+    </div>
+</mat-card>

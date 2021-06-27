@@ -1,4 +1,5 @@
 export class Images{
-    path?: string;
-    
+    path?: string[];
+    header?: string;
+    body?: string[];
 }

@@ -1,0 +1,14 @@
+<mat-card>
+    <div class="flex-settings">
+        <div class="list-style">
+            <div style="padding: 10px;float: left;" *ngFor="let image of img.path">
+                <img src={{image}} width="100px" height="150vh"
+                    style=" float: left; max-width: 305px; box-shadow: 5px 5px 5px rgb(0, 0, 0, .3);" />
+            </div>
+            <h5><b>{{img.header}}</b></h5>
+            <div style="margin-bottom: 10px;" *ngFor="let body of img.body;">
+                    {{body}}
+            </div>
+        </div>
+    </div>
+</mat-card>

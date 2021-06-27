@@ -1,0 +1,11 @@
+@media(min-width: 840px){
+    .list-style{
+        float:left;
+        position: relative;
+    }
+}
+.flex-settings{
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+}

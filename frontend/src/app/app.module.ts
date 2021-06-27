@@ -20,7 +20,8 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { CardComponent } from './reuse/card/card.component'; 
 import {MatCardModule} from '@angular/material/card';
 import { PictureCardComponent } from './reuse/picture-card/picture-card.component';
-import { TwitterComponent } from './svg/twitter/twitter.component'; 
+import { TwitterComponent } from './svg/twitter/twitter.component';
+import { ProfileCardComponent } from './reuse/profile-card/profile-card.component'; 
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TwitterComponent } from './svg/twitter/twitter.component';
     WelcomeComponent,
     CardComponent,
     PictureCardComponent,
-    TwitterComponent
+    TwitterComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,

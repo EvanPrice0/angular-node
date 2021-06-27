@@ -8,7 +8,7 @@ import { Slide } from 'src/app/models/slide';
 })
 export class WelcomeComponent {
 
-  slide1:Slide = {
+  slide:Slide = {
     path: '../../assets/img/arc3d.jpg',
     header: "Arc 3d",
     description: "here is Arc 3d",

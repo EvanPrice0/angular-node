@@ -9,9 +9,9 @@
     </div>
     <div class="carousel-inner" style="height: 45vh;">
         <div class="carousel-item active" style="height: 40vh;">
-            <img src="assets/img/arc3d.jpg" height="100%" class="d-block w-100" alt="Arc 3d">
+            <img src={{slide1.path}} height="100%" class="d-block w-100" alt="Arc 3d">
             <div class="carousel-caption d-sm-block"
-                style="top: 65%; color: white; background-color: rgb(0,0,0,.6);">
+                style="top: 65%; bottom: 0.25rem; color: white; background-color: rgb(0,0,0,.6);">
                 <h5>{{slide1.header}}</h5>
                 <p>{{slide1.description}}</p>
             </div>
@@ -19,7 +19,7 @@
         <div class="carousel-item" *ngFor="let slide of slides" style="height: 40vh;">
             <img src={{slide.path}} height="100%" class="d-block w-100" alt={{slide.alt}}>
             <div class="carousel-caption d-sm-block"
-                style="top: 65%; color: white; background-color: rgb(0,0,0,.6);">
+                style="top: 65%; bottom: 0.25rem; color: white; background-color: rgb(0,0,0,.6);">
                 <h5>{{slide.header}}</h5>
                 <p>{{slide.description}}</p>
             </div>
