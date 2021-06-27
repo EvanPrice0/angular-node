@@ -14,6 +14,7 @@
         <a routerLink="contact" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>contact</a>
         <a routerLink="photos" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>photos</a>
         <a routerLink="team" class="rl d-none d-md-block" routerLinkActive="active" mat-list-item>team</a>
+        <span class="example-spacer"></span>
         <div class="d-none d-lg-block" style="font-size: 50%; align-self: flex-end;">
             email: <a href="mailto:proven@prvninc.com">PROVEN@PRVNinc.com</a>
             North Liberty:<a href="tel:3193597808">(319)359-7808</a>
@@ -23,7 +24,7 @@
         <twitter></twitter>
 
     </mat-toolbar>
-    <mat-sidenav-container class="example-container cont-adj">
+    <mat-sidenav-container class="example-container cont-adj" style=  "background-color: rgba(204, 199, 185, 0.692)"    >
         <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
             fixedTopGap="56" class="d-sm-block d-md-none">
             <mat-nav-list>
@@ -39,22 +40,22 @@
                 <a class="rl" (click)="snav.toggle()" routerLink="team" routerLinkActive="active" mat-list-item>team</a>
             </mat-nav-list>
         </mat-sidenav>
-        <mat-sidenav-content>
-            <div style="display: flex; flex-direction: column;">
-                <div style="display: flex;">
-                    <div style="flex: 1;"></div>
+        <mat-sidenav-content style="background-color: rgba(204, 199, 185, 0.692);">
+            <div style="display: flex;">
+                <div style="display: flex; height: 77vh; width: 100%">
+                    <div class="color-gap"></div>
                     <div style="flex: 4; display: flex; flex-direction: column;">
                         <router-outlet *ngIf="router.url != '/home'"></router-outlet>
                         <welcome *ngIf="router.url === '/home'"></welcome>
                     </div>
-                    <div style="flex: 1;"></div>
+                    <div class="color-gap"></div>
                 </div>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
-    <footer class="page-footer font-small height-adj" style="background-color: black;">
+    <footer class="page-footer font-small height-adj" style="background-color: rgba(255, 255, 255, .5);">
         <!-- Copyright -->
-        <div style="color:white" class="sizer footer-copyright text-center py-3">© 2014 Copyright:
+        <div class="sizer footer-copyright text-center py-3">© 2014 Copyright:
             <a href="https://prvninc.com/"> PRVN Inc. </a>
             PRVN Consultants, Inc. * 710 Pacha Parkway, Suite 1, North Liberty, IA 52317   
             <div class="d-md-block d-lg-none" style="font-size: 50%; align-self: flex-end;">

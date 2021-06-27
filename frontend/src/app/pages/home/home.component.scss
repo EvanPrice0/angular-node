@@ -1,6 +1,5 @@
   .mat-toolbar{
-    background: #43C02B;
-    color: #fff;
+    background-color: (255, 255, 255, .5);
   }
 
 .home-button {
@@ -22,12 +21,11 @@ mat-icon{
   border: none;
 }
 .rl:hover{
-  border-radius: 35%;
-  background-color: rgb(255, 255, 255, .5);
+  border-radius: 15%;
+  background-color: rgba(204, 199, 185, 0.692);
 }
 .rl.active{
-  border-radius: 35%;
-  background-color: rgb(255, 255, 255, .5);
+  border-bottom: 1px solid rgba(204, 199, 185, 0.692);
 }
 .rl:link{
   color:black;
@@ -43,7 +41,9 @@ button:hover{
   background-color: rgb(255, 255, 255, .5);
 }
 
-
+.color-gap{
+  flex: 1;
+}
 /* Set a specific color for each brand */
 
 /* Facebook */
