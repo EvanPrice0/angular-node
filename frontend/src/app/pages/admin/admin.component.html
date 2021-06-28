@@ -4,7 +4,7 @@
         <div style="flex: 1;"></div>
         <mat-card style="flex: 4; text-align: center;">
             <h1>Login</h1>
-            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm)">
                 <p>
                     <mat-form-field appearance="standard">
                         <mat-label>Username:</mat-label>
