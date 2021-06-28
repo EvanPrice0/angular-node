@@ -32,7 +32,6 @@ app.post(`/api/login`, async(req, res) => {
       if (user) {
         // check user password with hashed password stored in the database
         const validPassword = await bcrypt.compare(body.password, user.password);
-        console.log(validPassword)
         if (validPassword) {
           const accessToken = jwt.sign({ username: user.username }, 'secret');
           res.status(200).json({accessToken,body});
