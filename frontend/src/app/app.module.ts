@@ -28,7 +28,8 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatInputModule} from '@angular/material/input'; 
-import {MatRippleModule} from '@angular/material/core'; 
+import {MatRippleModule} from '@angular/material/core';
+import { SignupComponent } from './pages/signup/signup.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import {MatRippleModule} from '@angular/material/core';
     PictureCardComponent,
     TwitterComponent,
     ProfileCardComponent,
-    AdminComponent
+    AdminComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

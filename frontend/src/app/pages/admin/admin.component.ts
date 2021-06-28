@@ -9,11 +9,10 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
-  user?: User;
+  users?: User[];
   constructor(private login: LoginService, public fb: FormBuilder) {
     this.login.getLogin().subscribe((user)=>{
-      this.user=user;
-      console.log(this.user)
+      this.users=user;
     })
    }
    profileForm = this.fb.group({
@@ -21,10 +20,12 @@ export class AdminComponent {
      password: ['', Validators.required]
    })
    onSubmit=(form)=>{
-     console.log(this.user)
-     this.login.setLogin(this.user._id, form.value.username, form.value.password).subscribe((data)=>{
-      console.log('data',data)
-     })
+     let user = this.users.find(nam=>nam.username==form.value.username);
+     if(user){
+      this.login.setLogin(user._id, form.value.username, form.value.password).subscribe((data)=>{
+        console.log('data',data)
+       })
+     }
     }  
 
 }

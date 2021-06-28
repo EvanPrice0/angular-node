@@ -7,6 +7,7 @@ import { PhotosComponent } from './pages/photos/photos.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { TeamComponent } from './pages/team/team.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
     { path: 'photos', component: PhotosComponent },
     { path: 'team', component: TeamComponent }
   ]},
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin', component: AdminComponent },
+  { path: 'create', component: SignupComponent }
 ];
 
 @NgModule({
